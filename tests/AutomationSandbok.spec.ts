@@ -17,7 +17,7 @@ import { SandboxPage } from './Pages/SandboxPage';
         })
         /* realizar un skip de una prueba con un condicional por ejemplo no funciona para chrome*/
         /* Sumar anotaciones .info */
-        test.only('lleno un campo de texto en Automation Sandbox',async({page,browserName}) => {
+        test('lleno un campo de texto en Automation Sandbox',async({page,browserName}) => {
             test.info().annotations.push({
                type: 'User Story 122',
                description: 'el usuario puede seleccionar un dia'
