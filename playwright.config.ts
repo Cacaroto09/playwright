@@ -52,7 +52,7 @@ export default defineConfig({
     //------------
     {
      name: 'API tests',
-     testMatch: 'APITest/**/*',
+     testMatch: 'APITest/Pages/*',
      use: { 
        baseURL: 'https://api.github.com',
        extraHTTPHeaders: {
