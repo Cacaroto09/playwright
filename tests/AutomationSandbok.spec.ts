@@ -1,5 +1,8 @@
 import { test, Browser, Page, expect } from '@playwright/test';
 import { SandboxPage } from './Pages/SandboxPage';
+import dotenv from 'dotenv';
+dotenv.config();
+const baseURL = process.env.BASE_URL || '';
 (async () => {
     let browser: Browser;
     let page: Page;
@@ -26,8 +29,8 @@ import { SandboxPage } from './Pages/SandboxPage';
             
             
             await test.step('Dado que navego a free range testers', async () => {
-                await page.goto('https://thefreerangetester.github.io/sandbox-automation-testing/');
-            
+               // await page.goto('https://thefreerangetester.github.io/sandbox-automation-testing/');
+               await page.goto(baseURL);
         })
             await await test.step('Puedo ingresar texto', async () => {
                await expect(page.getByRole('textbox', { name: 'Un aburrido texto' }),'El campo de texto no admite edicion').toBeEditable(); 
