@@ -1,6 +1,6 @@
 pipeline {
-agent { label 'docker'}
-tools { nodejs 'node-lts' }
+agent any
+
 environment { BASE_URL = credential('base_url')}
 options { timeout(time: 60, unit: 'MINUTES'); timestamps()}
 stages{
